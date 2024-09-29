@@ -30,6 +30,6 @@ Atenção: A violação dos termos da licença poderá resultar em ações legai
 
 
 
-## uporte
+## Suporte
 Para dúvidas, problemas ou feedback, por favor abra uma issue ou entre em contato diretamente com os desenvolvedores.
 
