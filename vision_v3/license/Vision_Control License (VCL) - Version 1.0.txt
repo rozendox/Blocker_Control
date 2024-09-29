@@ -7,9 +7,11 @@ Vision_Control License (VCL) - Versão 1.0
 O uso deste software é estritamente limitado às seguintes condições:
 
 O Usuário pode fazer download, copiar e modificar o Software exclusivamente para fins de análise pessoal e não comercial.
-O Usuário não está autorizado a distribuir, compartilhar, sublicenciar, comercializar ou explorar o Software em qualquer formato, para qualquer propósito, seja de forma direta ou indireta, sem a permissão explícita e por escrito do Licenciante.
+O Usuário não está autorizado a distribuir, compartilhar, sublicenciar, comercializar ou explorar o Software em qualquer formato, para qualquer propósito, 
+seja de forma direta ou indireta, sem a permissão explícita e por escrito do Licenciante.
 3. Restrições de Uso
-Uso Comercial Proibido: Sob nenhuma circunstância o Software pode ser utilizado, total ou parcialmente, para fins comerciais, incluindo, mas não se limitando a, venda, licenciamento, oferta de serviços pagos ou qualquer outra forma de obtenção de receita.
+Uso Comercial Proibido: Sob nenhuma circunstância o Software pode ser utilizado, total ou parcialmente, para fins comerciais, incluindo, mas não se limitando a, venda, 
+licenciamento, oferta de serviços pagos ou qualquer outra forma de obtenção de receita.
 Distribuição Proibida: O Software não pode ser distribuído em nenhuma plataforma ou meio, seja gratuito ou pago, sem autorização explícita do Licenciante.
 4. Violações e Consequências Legais
 O uso não autorizado, reprodução, distribuição, modificação ou comercialização do Software constitui violação direta desta licença, acarretando em sanções legais, incluindo, mas não se limitando a:
@@ -19,4 +21,5 @@ Indenizações por perdas e danos, conforme permitido pela legislação vigente.
 ATENÇÃO: A violação desta licença poderá resultar em ações legais imediatas, incluindo, mas não se limitando a, processos civis e/ou penais. O Licenciante se reserva o direito de buscar compensação máxima prevista em lei.
 
 5. Sem Garantia
-Este Software é fornecido "como está", sem garantias de qualquer tipo, expressas ou implícitas, incluindo, mas não se limitando a, garantias de comercialização, adequação a um propósito específico ou não violação de direitos de terceiros. O uso do Software é feito sob o risco exclusivo do Usuário.
+Este Software é fornecido "como está", sem garantias de qualquer tipo, expressas ou implícitas, incluindo, mas não se limitando a, 
+garantias de comercialização, adequação a um propósito específico ou não violação de direitos de terceiros. O uso do Software é feito sob o risco exclusivo do Usuário.
