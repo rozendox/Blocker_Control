@@ -33,3 +33,17 @@ Atenção: A violação dos termos da licença poderá resultar em ações legai
 ## Suporte
 Para dúvidas, problemas ou feedback, por favor abra uma issue ou entre em contato diretamente com os desenvolvedores.
 
+
+
+
+### Equipe:
+
+#### negócios
+  - Bruno Patrick
+  - Paulo Henrique
+### Criativo
+  - Thomas Eliton
+  - Matheus Moreira
+  - José Luís
+### Desenvolvedor 
+  - Gabriel Rozendo
