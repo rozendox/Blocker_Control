@@ -3,9 +3,13 @@ Vision Control, é um sistema de gerenciamento de destino e de identificação d
 
 ## Funcionalidades
 --- Destinação de itens
+
 --- Identificação de itens através de id por item
+
 --- Confirmação de entrega por endereço
+
 --- possibilidade de cadastro de endereços novos
+
 --- Capacidade de entrega 100% correta.
 
 
