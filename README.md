@@ -1,4 +1,4 @@
-# Blocker Control
+![b c Fluxograma](https://github.com/user-attachments/assets/21379ffb-26ab-45ea-a466-106f810e8cae)# Blocker Control
 
 Vision Control, é um sistema de gerenciamento de destino e de identificação de patrimonios (BENS PERMANENTES) de empresas públicas e privadas.
 
@@ -55,3 +55,7 @@ Para dúvidas, problemas ou feedback, por favor abra uma issue ou entre em conta
   - José Luís
 ### Desenvolvedor 
   - Gabriel Rozendo
+
+
+fluxograma:
+![b c Fluxograma](https://github.com/user-attachments/assets/c542a41a-a6ce-406f-bdeb-2363d29cdf02)
