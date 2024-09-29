@@ -18,9 +18,13 @@ Vision Control, é um sistema de gerenciamento de destino e de identificação d
 Contribuições são bem-vindas! Se você tiver sugestões de melhorias ou novos recursos, siga os passos abaixo:
 
 Faça um fork do projeto.
+
 Crie uma branch para suas modificações (git checkout -b feature/minha-modificacao).
+
 Faça um commit das suas alterações (git commit -m 'Adiciona nova funcionalidade').
+
 Envie suas mudanças para o repositório remoto (git push origin feature/minha-modificacao).
+
 Abra um Pull Request e descreva suas modificações.
 
 
