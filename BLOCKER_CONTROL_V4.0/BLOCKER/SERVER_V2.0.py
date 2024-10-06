@@ -19,6 +19,7 @@ gerente_socket = None  # Socket do cliente gerente
 excel_file = '../../serverTCP/serverTCP2/files/vision/vision_v3/testes 1/blocker_control_V1/blocker control/B_CV2/itens_enviados.xlsx'
 entregues_file = '../../serverTCP/serverTCP2/files/vision/vision_v3/testes 1/blocker_control_V1/blocker control/B_CV2/tabela_de_itens_entregues.xlsx'
 
+
 # Função para salvar informações no Excel
 def save_to_excel(item_name, location_id, quantity):
     if not os.path.exists(excel_file):
@@ -31,6 +32,7 @@ def save_to_excel(item_name, location_id, quantity):
 
     sheet.append([item_name, locations[location_id], quantity])
     workbook.save(excel_file)
+
 
 # Função para mover itens para o arquivo de itens entregues
 def move_to_delivered(item_name):
@@ -64,31 +66,38 @@ def move_to_delivered(item_name):
             sheet_delivered.append(data)
             wb_delivered.save(entregues_file)
 
+
 # Função para salvar locais no arquivo locais.txt
 def save_location_to_txt(location_id, location_name):
     with open(
-            '../../serverTCP/serverTCP2/files/vision/vision_v3/testes 1/blocker_control_V1/blocker control/B_CV2/locais.txt', 'a') as f:
+            '../../serverTCP/serverTCP2/files/vision/vision_v3/testes 1/blocker_control_V1/blocker control/B_CV2/locais.txt',
+            'a') as f:
         f.write(f"{location_id},{location_name}\n")
+
 
 # Função para carregar os locais do arquivo locais.txt
 def load_locations_from_txt():
     if os.path.exists(
             '../../serverTCP/serverTCP2/files/vision/vision_v3/testes 1/blocker_control_V1/blocker control/B_CV2/locais.txt'):
         with open(
-                '../../serverTCP/serverTCP2/files/vision/vision_v3/testes 1/blocker_control_V1/blocker control/B_CV2/locais.txt', 'r') as f:
+                '../../serverTCP/serverTCP2/files/vision/vision_v3/testes 1/blocker_control_V1/blocker control/B_CV2/locais.txt',
+                'r') as f:
             for line in f.readlines():
                 location_id, location_name = line.strip().split(',')
                 locations[location_id] = location_name
+
 
 # Função para alertar o gerente
 def alert_gerente(mensagem):
     if gerente_socket:
         gerente_socket.send(f"ALERTA: {mensagem}\n".encode())
 
+
 # Função para adicionar um item ao sistema
 def add_item(item_name, quantity):
     items[item_name] = int(quantity)
     print(f"Item {item_name} com quantidade {quantity} adicionado.")
+
 
 # Função para lidar com o cliente
 def handle_client(conn, addr, is_gerente=False):
@@ -124,7 +133,8 @@ def handle_client(conn, addr, is_gerente=False):
                                 save_to_excel(item_name, location_id, quantity)
                                 conn.send(f"Item {item_name} enviado para {locations[location_id]}.\n".encode())
                             else:
-                                alert_gerente(f"Um local com ID {location_id} tentou confirmar o envio de um item não cadastrado ({item_name}).")
+                                alert_gerente(
+                                    f"Um local com ID {location_id} tentou confirmar o envio de um item não cadastrado ({item_name}).")
                                 conn.send(f"Erro: Item {item_name} não cadastrado.\n".encode())
                         else:
                             alert_gerente(f"Item {item_name} foi enviado para o local errado.")
@@ -139,14 +149,18 @@ def handle_client(conn, addr, is_gerente=False):
 
                         if location_id in locations:
                             if item_name in deliveries and deliveries[item_name] == location_id:
-                                conn.send(f"Entrega do item {item_name} confirmada no local {locations[location_id]}.\n".encode())
+                                conn.send(
+                                    f"Entrega do item {item_name} confirmada no local {locations[location_id]}.\n".encode())
                                 move_to_delivered(item_name)
                             else:
-                                alert_gerente(f"Tentativa de confirmação de entrega de item {item_name} não cadastrado no local {location_id}.")
-                                conn.send(f"Erro: Item {item_name} não encontrado para confirmação de entrega.\n".encode())
+                                alert_gerente(
+                                    f"Tentativa de confirmação de entrega de item {item_name} não cadastrado no local {location_id}.")
+                                conn.send(
+                                    f"Erro: Item {item_name} não encontrado para confirmação de entrega.\n".encode())
                         else:
                             conn.send(f"Erro: Local {location_id} não encontrado.\n".encode())
-                            alert_gerente(f"Local {location_id} não encontrado durante tentativa de confirmação de entrega.")
+                            alert_gerente(
+                                f"Local {location_id} não encontrado durante tentativa de confirmação de entrega.")
                     except KeyError:
                         conn.send(f"Erro: Item ou local inválido para confirmação de entrega.\n".encode())
                     except IndexError:
@@ -194,7 +208,8 @@ def handle_client(conn, addr, is_gerente=False):
                     if os.path.exists(excel_file):
                         wb = load_workbook(excel_file)
                         sheet = wb.active
-                        response = "\n".join([f"{row[0]} - {row[1]} - {row[2]}" for row in sheet.iter_rows(min_row=2, values_only=True)])
+                        response = "\n".join(
+                            [f"{row[0]} - {row[1]} - {row[2]}" for row in sheet.iter_rows(min_row=2, values_only=True)])
                         conn.send(response.encode())
                     else:
                         conn.send("Nenhum item enviado.\n".encode())
@@ -209,6 +224,7 @@ def handle_client(conn, addr, is_gerente=False):
         conn.close()
         print(f'Cliente desconectado: {addr}')
 
+
 # Inicia o servidor
 def start_server():
     server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -221,6 +237,7 @@ def start_server():
         is_gerente = addr[1] == 65531  # Porta diferente usada para o gerente
         client_thread = threading.Thread(target=handle_client, args=(conn, addr, is_gerente))
         client_thread.start()
+
 
 if __name__ == "__main__":
     load_locations_from_txt()  # Carrega os locais salvos no arquivo locais.txt

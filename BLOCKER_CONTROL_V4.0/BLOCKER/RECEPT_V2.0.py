@@ -11,10 +11,12 @@ import socket
 SERVER_HOST = '127.0.0.1'
 SERVER_PORT = 65531  # Porta do servidor
 
+
 def confirmar_entrega(receptor_socket):
     nome_item = input("Nome do item: ")
     id_local = input("ID do local: ")
     receptor_socket.send(f"CONFIRM DELIVERY|{nome_item}|{id_local}".encode())
+
 
 def main():
     receptor_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -42,6 +44,7 @@ def main():
         print(f"Resposta do servidor: {resposta}")
 
     receptor_socket.close()
+
 
 if __name__ == "__main__":
     main()
