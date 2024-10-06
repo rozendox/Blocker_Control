@@ -44,7 +44,7 @@ Para dúvidas, problemas ou feedback, por favor abra uma issue ou entre em conta
 
 
 
-### Equipe:
+### Equipe do hackaMT:
 
 #### negócios
   - Bruno Patrick
@@ -57,6 +57,10 @@ Para dúvidas, problemas ou feedback, por favor abra uma issue ou entre em conta
   - Gabriel Rozendo
 
 
+#### atual manutenedor da ideia :
+  - Rozendo 
+
 fluxograma:
-![b c Fluxograma](https://github.com/user-attachments/assets/ad7d64f0-1b5e-4109-a13c-ab7c11bea65f)
+
+![b c Fluxograma](https://github.com/user-attachments/assets/ca2a3651-32a2-4abe-8fcd-001c20a461ca)
 
